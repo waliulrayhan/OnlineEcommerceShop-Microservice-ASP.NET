@@ -8,7 +8,7 @@ namespace Catalog.API.Repository
 {
     public class ProductRepository : CommonRepository<Product>, IProductRepository
     {
-        public ProductRepository() : base(new CatalogDbContext())
+        public ProductRepository(CatalogDbContext dbContext) : base(dbContext)
         {
         }
     }
